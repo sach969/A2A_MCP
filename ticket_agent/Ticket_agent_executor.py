@@ -4,8 +4,9 @@ from a2a.utils import new_agent_text_message
 from fastmcp import Client
 from fastmcp.client.transports import StreamableHttpTransport
 from google import genai
+import os
 
-GEMINI_API_KEY = "AIzaSyDXi2ifbugToNiIqEkv4fRazUPVn_4Hnno"  
+GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY")  
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 transport = StreamableHttpTransport(url="http://localhost:8000/booking/mcp")
 mcp_client = Client(transport)
@@ -33,7 +34,6 @@ class TicketAgentExecutor(AgentExecutor):
                         tools=[mcp_client.session],
                     )
                 )
-                print(response)
 
                 tool_result = None
                 text_result = None

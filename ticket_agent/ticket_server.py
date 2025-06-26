@@ -15,7 +15,7 @@ skill = AgentSkill(
 agent_card = AgentCard(
     name="Ticket Agent",
     description="Books tickets for travel/events",
-    url="http://localhost:9998/",
+    url="http://localhost:9999/ticket",
     version="1.0.0",
     defaultInputModes=["text"],
     defaultOutputModes=["text"],
@@ -33,5 +33,5 @@ server = A2AStarletteApplication(
     http_handler=request_handler
 )
 
-if __name__ == "__main__":
-    uvicorn.run(server.build(), host="0.0.0.0", port=9998)
+# if __name__ == "__main__":
+#     uvicorn.run(server.build(), host="0.0.0.0", port=9998)

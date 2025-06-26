@@ -15,7 +15,7 @@ skill = AgentSkill(
 agent_card = AgentCard(
     name="Weather Agent",
     description="Provide Current Weather",
-    url="http://localhost:9997/",
+    url="http://localhost:9999/weather",
     version="1.0.0",
     defaultInputModes=["text"],
     defaultOutputModes=["text"],
@@ -33,5 +33,5 @@ server = A2AStarletteApplication(
     http_handler=request_handler
 )
 
-if __name__ == "__main__":
-    uvicorn.run(server.build(), host="0.0.0.0", port=9997)
+# if __name__ == "__main__":
+#     uvicorn.run(server.build(), host="0.0.0.0", port=9997)

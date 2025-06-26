@@ -5,12 +5,13 @@ from a2a.utils import new_agent_text_message
 from fastmcp import Client
 from fastmcp.client.transports import StreamableHttpTransport
 from google import genai
+import os
 
 class WeatherAgentExecutor(AgentExecutor):
     async def execute(self, context: RequestContext, event_queue: EventQueue) -> None:
         user_input = context.get_user_input() or "What's the weather in Mohali?"
 
-        gemini_client = genai.Client( api_key ="AIzaSyDXi2ifbugToNiIqEkv4fRazUPVn_4Hnno")
+        gemini_client = genai.Client( api_key =os.getenv("GOOGLE_API_KEY"))
         transport = StreamableHttpTransport(url="http://localhost:8000/weather/mcp")
         mcp_client = Client(transport)
 

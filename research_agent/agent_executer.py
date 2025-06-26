@@ -7,7 +7,7 @@ from a2a.utils import new_agent_text_message
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-load_dotenv()
+load_dotenv() 
 
 class ResearchAgentExecutor(AgentExecutor):
     def __init__(self):

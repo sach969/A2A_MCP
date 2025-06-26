@@ -20,7 +20,7 @@ skill = AgentSkill(
 agent_card = AgentCard(
     name="Research Agent",
     description="Answers questions using LLM (Gemini)",
-    url="http://localhost:9999/",
+    url="http://localhost:9999/research",
     version="1.0.0",
     defaultInputModes=["text"],
     defaultOutputModes=["text"],
@@ -40,6 +40,6 @@ server = A2AStarletteApplication(
     http_handler=request_handler
 )
 
-# 5. Run the server
-if __name__ == "__main__":
-    uvicorn.run(server.build(), host="0.0.0.0", port=9999)
+# # 5. Run the server
+# if __name__ == "__main__":
+#     uvicorn.run(server.build(), host="0.0.0.0", port=9999)
