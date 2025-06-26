@@ -1,0 +1,19 @@
+[project]
+name = "a2a-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "a2a-sdk>=0.2.8",
+    "fastmcp>=2.9.0",
+    "google>=3.0.0",
+    "google-genai>=1.21.1",
+    "httpx>=0.28.1",
+    "langchain-google-genai>=2.1.5",
+    "langgraph>=0.4.8",
+    "mcp[cli]>=1.9.4",
+    "python-dotenv>=1.1.0",
+    "streamlit>=1.46.0",
+    "uvicorn>=0.34.3",
+]

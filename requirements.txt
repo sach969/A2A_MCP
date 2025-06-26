@@ -1,0 +1,11 @@
+a2a-sdk
+httpx
+langgraph
+langchain-google-genai
+python-dotenv
+uvicorn
+streamlit
+fastmcp
+mcp[cli]
+google
+google-genai
